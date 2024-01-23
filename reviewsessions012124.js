@@ -89,18 +89,18 @@
 */
 
 
- function findTarget(arr, id) {
-     const obj = arr[i];
-    for (let i = 0; i< arr.length; i++) {
-        if (obj.id === id) {
-            return obj;
-        }
+//  function findTarget(arr, id) {
+//      for (let i = 0; i< arr.length; i++) {
+//         const obj = arr[i];
+//         if (obj.id === id) {
+//             return obj;
+//         }
 
-    }
-    return [];
- }
+//     }
+//     return [];
+//  }
 
-  console.log(findTarget([{id: "Y42C_a", name: "Robert", occupation: "Chef", eyeColor: "green"}], id));
+//   console.log(findTarget([{id: "Y42C_a", name: "Robert", occupation: "Chef", eyeColor: "green"}], "Y42C_a"));
 // {
 //     id: "Y42C_a",
 //     name: "Robert",
@@ -139,3 +139,26 @@
  name: "Robert"
 }
 */
+ function findName(arr, target) {
+  for (let i = 0; i < arr. length; i++){
+    const obj = arr[i];
+    if(obj.name === target) {
+        return obj;
+    }
+
+  } 
+ }
+const Objects = [
+    { name: "Robert" },
+    { name: "Sophia" },
+    { name: "David" },
+    { name: "Alice" },
+    { name: "Michael" }
+  ];
+  
+  console.log(findName([{Objects}], {name: "Robert" }));
+  
+  
+  
+  
+  
