@@ -4,17 +4,26 @@
 
 function capitalizedString(str){
     const sentence = " The stray dog is dead.";
-        if (str === sentence) {
-        return (sentence.toUpperCase());
+//         if (str === sentence) {
+//         return (sentence.toUpperCase());
 
-        } else {
+//         } else {
          
-         return null;
+//          return null;
 
-      }
+//       }
+// }
+
+//  console.log(capitalizedString(" The stray dog is dead."));
+
+
+
+//  OR 
+
+ return sentence.toUpperCase("The stray dog is dead") || null;
+
 }
-
- console.log(capitalizedString(" The stray dog is dead."));
+console.log(capitalizedString());
 // 2.----------------------------------ç=   v       
 // Write a function that takes in an object and returns a formatted greeting.
 // This is the format of the object - 
