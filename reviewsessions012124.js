@@ -142,8 +142,10 @@
  function findName(arr, target) {
   for (let i = 0; i < arr. length; i++){
     const obj = arr[i];
-    if(obj.name === target) {
-        return obj;
+    if(obj.id === target) {
+        return {
+            "name" :obj.name
+           };
     }
 
   } 
@@ -158,7 +160,13 @@ const Objects = [
   
   console.log(findName([{Objects}], {name: "Robert" }));
   
-  
+//   ``function findTargetName(array, targetID) {
+//     for(let obj of array ){
+//         if(obj.id === targetID) {
+//             return {"name": obj.name}
+//         }
+//     }
+// }``
   
   
   
