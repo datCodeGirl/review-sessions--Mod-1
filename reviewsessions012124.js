@@ -30,33 +30,54 @@
 
 // Given an array of numbers, return the first number that's bigger than 14 or undefined if no number is bigger than 14
 
-function findFirstNumGreater(arr, numToFind) {
-    for (let i = 0; i< arr.length; i++) {
-        let numToFind = 14;
-        let currNumber = arr[i];
-        if (currNumber > numToFind) {
-            return currNumber;
-        }
-    }
-    return undefined;
-}
+// function findFirstNumGreater(arr, numToFind) {
+//     for (let i = 0; i< arr.length; i++) {
+//         let numToFind = 14;
+//         let currNumber = arr[i];
+//         if (currNumber > numToFind) {
+//             return currNumber;
+//         }
+//     }
+//     return undefined;
+// }
 
- console.log(findFirstNumGreater([3, 12, 9, 6, 17,22], 14));
- console.log(findFirstNumGreater([2, 9, 6, 12, 13, 5, 1], 14));
+//  console.log(findFirstNumGreater([3, 12, 9, 6, 17,22], 14));
+//  console.log(findFirstNumGreater([2, 9, 6, 12, 13, 5, 1], 14));
 
-//OR
-const arr1 = [3, 12, 9, 6, 17,22];
-const findFirstNum = arr1.find((element) => element > 14);
-console.log(findFirstNum([3, 12, 9, 6, 17,22]));
-console.log(findFirstNum([3, 12, 9, 6, 17,22]));
-
+// de
 
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
 
+//  function findStringLength(arr) {
+//     for (let str of arr) {  
+//         if (str.length > 4) {
+//             return str;
+//         }
+//     }
+//        return undefined;
+//  }
+//  console.log(findStringLength("pan", "kite", "ape", "antelope"));
+ 
+//  function findStringLength(arr, strLength) {
+//      return arr.find((str) => str.length > strLength) || null;
 
+//  }
+//  console.log(findStringLength(["pan", "kite", "ape", "antelope"], 5));
 
-// Given an array of Objects and a target id return the first object that matches the id or undefined if no such object is found
+//  function findStringLength(arr, str){
+
+//     for (let i = 0; i < arr.length; i++) {
+//         let currentStr = arr[i];
+//      if (currentStr.length > str) {
+//         return currentStr;
+//       }
+//     }
+//      return undefined;
+//  }
+ //console.log(findStringLength(["pan", "kite", "ape", "antelope"], 5));
+
+//Given an array of Objects and a target id return the first object that matches the id or undefined if no such object is found
 // Expected Structure of a SINGLE object - 
 /*
 {
@@ -67,6 +88,50 @@ console.log(findFirstNum([3, 12, 9, 6, 17,22]));
 }
 */
 
+
+ function findTarget(arr, id) {
+     const obj = arr[i];
+    for (let i = 0; i< arr.length; i++) {
+        if (obj.id === id) {
+            return obj;
+        }
+
+    }
+    return [];
+ }
+
+  console.log(findTarget([{id: "Y42C_a", name: "Robert", occupation: "Chef", eyeColor: "green"}], id));
+// {
+//     id: "Y42C_a",
+//     name: "Robert",
+//     occupation: "Chef",
+//     eyeColor: "green"
+//   },
+//   {
+//     id: "X78B_b",
+//     name: "Sophia",
+//     occupation: "Engineer",
+//     eyeColor: "brown"
+//   },
+//   {
+//     id: "Z29D_c",
+//     name: "David",
+//     occupation: "Teacher",
+//     eyeColor: "blue"
+//   },
+//   {
+//     id: "W15E_d",
+//     name: "Alice",
+//     occupation: "Artist",
+//     eyeColor: "hazel"
+//   },
+//   {
+//     id: "V53F_e",
+//     name: "Michael",
+//     occupation: "Doctor",
+//     eyeColor: "gray"
+//   }
+  
 
 // Given an array of objects and a target id return a new object with only the name. The structure for a single object in the array would be as the one above. The returned object would look like this - 
 /*
