@@ -44,29 +44,27 @@ function capitalizedStrings(str){
 // This is the format of the object - 
 
 function formatGreeting(obj) {
-        //  let (arr[i] === obj);
-        //  if (name) {
-            
-        //  }    if(!arr === null) {
-
-
-        //       {
-        //     const john = {firstName: "John", lastName: "Klaus", occupation: "Carpenter" }
-        //     const rebecca = {firstName: "Rebecca", lastName: "Cohen",occupation: "Teacher"}
-        //       };
+        
             return `Hello ${obj.firstName} ${obj.lastName}, have a great day at your job as a ${obj.occupation}`;    
-        // }
-        // return null;
+        
 
  }
  const john = {firstName: "John", lastName: "Klaus", occupation: "Carpenter" }
-     const rebecca = {firstName: "Rebecca", lastName: "Cohen",occupation: "Teacher"}
+const rebecca = {firstName: "Rebecca", lastName: "Cohen",occupation: "Teacher"}
 
  console.log(formatGreeting(john) === "Hello John Klaus, have a great day at your job as a Carpenter");
   
 console.log(formatGreeting(rebecca) === "Hello Rebecca Cohen, have a great day at your job as a Teacher");
 
 formatGreeting(john);
+
+OR  
+
+// you can destructure and use the object as params
+
+function formatGreeting(firstName, LastName, Occupation) {
+    return `Hello ${obj.firstName} ${obj.lastName}, have a great day at your job as a ${obj.occupation}`; 
+}
   
 //   // 3.----------------------------------
 //   // Write a function that takes an array of objects and a targetId and returns a formatted string. Each object in the array will have the same structure as the objects from the previous question plus an id. Use chatGPT to create an array of 10 such objects.
