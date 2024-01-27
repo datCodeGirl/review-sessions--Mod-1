@@ -1,9 +1,23 @@
 // 1. Write a function that takes in an array and returns an object where each element in the array is a key, and the values are the number of times each element appears in the array -
 
-// YOUR CODE HERE
+function returnKeyValues(arr) {  
+    const obj = {}   // create an empty object to count the elements
 
+    for (let i = 0; i < arr.length; i++) { // create a for loop to access each element
+      let currentEle = arr[i] // set the current index to the current element
+        if (obj[currentEle]) { // if the current element is in the obj
+            obj[currentEle]++; // if it is ,increment the current element
+        }
+        if (!obj[currentEle]) { // if the current element is not in the object
+          obj[currentEle] = 1; // set the current element to 1
+        }
+    }
+    return obj; // return the object
+}
+const inputArray = ["apple", "orange", "apple", "banana", "apple", "orange"]
+ 
+console.log(returnKeyValues(inputArray));
 // Example:
-// ["apple", "orange", "apple", "banana", "apple", "orange"]
 // { apple: 3, orange: 2, banana: 1}
 
 // ------------------------------------------------------------------------
