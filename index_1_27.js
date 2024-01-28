@@ -3,10 +3,10 @@
 function returnKeyValues(arr) {  
     const obj = {}   // create an empty object to count the elements
 
-    for (let i = 0; i < arr.length; i++) { // create a for loop to access each element
-      let currentEle = arr[i] // set the current index to the current element
-        if (obj[currentEle]) { // if the current element is in the obj
-            obj[currentEle]++; // if it is ,increment the current element
+    for (let i = 0; i < arr.length; i++) { // create a for loop to access each element // you can also use a for..0f loop here
+      let currentEle = arr[i] // set the current index to the current element // key === currentEle
+        if (obj[currentEle]) { // if the current element is in the obj // you can also use an if/else statement
+            obj[currentEle]++; // if it is ,increment the current element 
         }
         if (!obj[currentEle]) { // if the current element is not in the object
           obj[currentEle] = 1; // set the current element to 1
@@ -16,36 +16,60 @@ function returnKeyValues(arr) {
 }
 const inputArray = ["apple", "orange", "apple", "banana", "apple", "orange"]
  
-console.log(returnKeyValues(inputArray));
-// Example:
-// { apple: 3, orange: 2, banana: 1}
+// console.log(returnKeyValues(inputArray));
+// // Example:
+// // { apple: 3, orange: 2, banana: 1}
 
-// ------------------------------------------------------------------------
+// //OR you can do the below
 
-// 2. Write a function that takes an object and a property name (key), and returns the value of the property. If the property doesn't exist in the object return an error message
+// // ------------------------------------------------------------------------
 
-// YOUR CODE HERE
+// // 2. Write a function that takes an object and a property name (key), and returns the value of the property. If the property doesn't exist in the object return an error message
+
+// function takeObject(obj, propertyName) {   //create a function that takes an object and key
+     
+//      if (obj[propertyName]) {
+//         return obj[propertyName];
+//      } else {
+//         return "ERRRORRRR";
+//      }
+// }    
+
+
+// //OR USING TENARY
+// return obj[key] ? obj[key] : "ERRRRORRRR";
+
+// //OR SHORT CIRUCUITING
+
+// return obj[key] || "ERRROOORRRR"; // short circuiting is using the OR (||)
+
+// console.log(takeObject({}, "green"));
+// console.log(takeObject({propertyName: "Ade"}, "PropertyName"))
+
+
 
 // ------------------------------------------------------------------------
 
 // 3. Given a person object, update their street to the new given street. The person object will have these properties -
 
-/*
 
 const person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 25,
-  address: {
-    street: "123 Main St",
-    city: "Anytown",
-    zip: "12345"
-  }
+    firstName: "John",
+    lastName: "Doe",
+    age: 25,
+    address: {
+        street: "123 Main St",
+        city: "Anytown",
+        zip: "12345"
+    }
 };
 
-*/
+
 
 // YOUR CODE HERE
+person.address.street= "123 Main St,Anytown, 12345";
+
+console.log(person);
 
 // ------------------------------------------------------------------------
 
@@ -111,8 +135,22 @@ const companyOrganizationalStructure = {
 };
 
 // YOUR CODE HERE
+console.log(companyOrganizationalStructure.development.departments.head.office.employees.softwareEngineer2.desk);
+console.log(companyOrganizationalStructure.departments.marketing.head.office.location);
+console.log(companyOrganizationalStructure.CEO.office.employees.executiveAssistant.name);
+// console.log({companyOrganizationalStructure.assign(softwareEngineer3.Name, "Adeola Aina-Marshall)})
 
-// ------------------------------------------------------------------------
+ const addObject= {
+    name: "Adeola Aina",
+    desk: "B901",
+  };
+
+companyOrganizationalStructure.development.departments.head.office.employees.softwareEngineer3 = addObject
+
+companyOrganizationalStructure.departments.marketing.head.name = "Johann Marketer";
+// -------------------------
+
+// -----------------------------------------------
 
 // 5. Given the following variables, create a new object. the key variable should be the key and the value variable should be it's corresponding value. You have to use the variables!
 
