@@ -14,15 +14,41 @@ function takeArray(arr){
     let str = [];
  for (let i = 0; i < arr.length; i++ ){
     str.push(arr[i].length);
- }
-
-return str;
+  } // return arr.map(str => str.length) // the map changes every string into the string length
+  
+  return str;
 }
+
 
 const inputArray = ["apple" , "car", "house" ,"people"]
 
 console.log(takeArray(inputArray));
+
+function findMax(arr){
+  return Math.max(...arr); // this math.max does NOT take in an array without the spread(...). In all other situations, it takes numbers.
+}
+//console.log(findMax([1, 2, 3 ]));// 3
+
 // 2. Write a function that takes an array of strings and returns an array of strings longer than 5 characters (spaces count)
+ function makeStrings(arr){
+   return arr.filter(str => str.length > 5);
+  // let greaterLength = [];
+  // for(let str of arr){
+  //    if (str.length > 5) {
+  //     greaterLength.push(str)
+  //    }
+  // }
+  // return greaterLength;
+
+  }
+
+  //const inputArray = ["apple" , "car", "house" ,"people"]
+
+console.log(makeStrings(inputArray));
+
+
+
+
 
 // 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
 
