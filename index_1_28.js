@@ -35,14 +35,14 @@ function findMax(arr){
   // let greaterLength = [];
   // for(let str of arr){
   //    if (str.length > 5) {
-  //     greaterLength.push(str)
-  //    }
-  // }
-  // return greaterLength;
+  //     greaterLength.push(str);
+  //   }
+   //}
+  return greaterLength;
 
   }
 
-  //const inputArray = ["apple" , "car", "house" ,"people"]
+  const inputArray1 = ["apple" , "car", "house" ,"people", "ice cream"]
 
 console.log(makeStrings(inputArray));
 
@@ -52,7 +52,23 @@ console.log(makeStrings(inputArray));
 
 // 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
 
-// 4. Write a function that takes an array of numbers and returns the sum of all even numebrs
+ function newLengths(arr){
+  // const isLargerThanFive = ((ele , acc)=> ele.length > 5 , 0);
+    //console.log(inputArray1.map(isLargerThanFive));
+      let string = [];
+      for(let str of arr){
+        if (str.length > 5){
+          string.push(str.length);
+        }
+
+      }
+
+
+      return string;
+}
+ 
+//console.log(newLengths(inputArray1));
+// 4. Write a function that takes an array of numbers and returns the sum of all even numbers
 
 // 5. Write a function that takes an array of numbers and returns the min num
 
