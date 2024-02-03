@@ -135,7 +135,7 @@ const companyOrganizationalStructure = {
 };
 
 // YOUR CODE HERE
-console.log(companyOrganizationalStructure.development.departments.head.office.employees.softwareEngineer2.desk);
+console.log(companyOrganizationalStructure.departments.development.head.office.employees.softwareEngineer2.desk);
 console.log(companyOrganizationalStructure.departments.marketing.head.office.location);
 console.log(companyOrganizationalStructure.CEO.office.employees.executiveAssistant.name);
 // console.log({companyOrganizationalStructure.assign(softwareEngineer3.Name, "Adeola Aina-Marshall)})
@@ -145,7 +145,7 @@ console.log(companyOrganizationalStructure.CEO.office.employees.executiveAssista
     desk: "B901",
   };
 
-companyOrganizationalStructure.development.departments.head.office.employees.softwareEngineer3 = addObject
+//companyOrganizationalStructure.development.departments.head.office.employees.softwareEngineer3 = addObject
 
 companyOrganizationalStructure.departments.marketing.head.name = "Johann Marketer";
 // -------------------------
@@ -158,13 +158,42 @@ const key = "name";
 const value = "Roberto Robertson"
 
 // 6. Write a function that takes an object as it's only parameter and logs each property to the console. The function ONLY LOGS
+ 
+function printObject(obj) {
+  for (const property in obj) {
+    console.log(`${property} : ${obj[property]}`)
+  }
+}
+const obj= {
+  color: "white",
+   width: 3, 
+   height: 4,
+    weight: "23Kilos"
+};
 
-// YOUR CODE HERE
+console.log(printObject(obj));
+
+
 
 // ------------------------------------------------------------------------
 
 // 7. Write a function that takes two objects and checks if they have the same values. HINT: use the (for.. in..) loop
+  function objWithSameValues(obj1, obj2) {
+    //const string = "same";
+    for(const key in obj1){
+      if(obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)){
+        if (obj1[key] !== obj2[key]){
+          
+        }
+        return "different";
+      
+      }
+      
+    }
+    return "same";
+  }
 
-// YOUR CODE HERE
+const obj1 = {white: "color", black: "hue", topaz: "pastel"}
+const obj2 = {white: "color", black: "hue"}
 
-
+console.log(objWithSameValues(obj1, obj2));
